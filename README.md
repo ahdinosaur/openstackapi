@@ -6,6 +6,8 @@ useful when you want to use [`openstacksdk`](https://docs.openstack.org/openstac
 
 __work in progress, has working proof of concept__
 
+sponsored by [PeachCloud](http://peachcloud.org) :peach: :cloud:
+
 ## setup
 
 ```shell
@@ -88,8 +90,8 @@ python api.py
 
 ---
 
-create cloud server
+create cloud server with Docker auto-installed
 
-```
-curl -i -H "Content-Type: application/json" -X POST -d '{ "name": "test1", "image": "Debian 9", "flavor": "s1-2", "network": ["ae4fffbd-2cc5-4a34-965b-6b3920276ab3", "d807404c-817c-4b34-8910-ca3a4537d476"], "key_name": "purple-paradise", "wait": true }' http://localhost:5000/servers
+```shell
+bash example.sh
 ```

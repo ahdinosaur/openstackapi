@@ -1,5 +1,7 @@
 from flask_restful import Resource, reqparse
 
+from logger import logger
+
 create_parser = reqparse.RequestParser()
 create_parser.add_argument('name', type=str, required=True)
 create_parser.add_argument('image', type=str, store_missing=False)
@@ -43,4 +45,5 @@ class ServerList(Resource):
 
     def post(self):
         create_kwargs = create_parser.parse_args()
+        logger.info(create_kwargs)
         return self.openstack_connection.create_server(**create_kwargs)

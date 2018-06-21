@@ -1,6 +1,6 @@
 from flask_restful import Resource
 
-class ServerList(Resource):
+class Server(Resource):
     def __init__(self, **kwargs):
         self.openstack_connection = kwargs['openstack_connection']
 

@@ -3,6 +3,7 @@ from flask_restful import Api
 import openstack
 
 from resources.server_list import ServerList
+from resources.server import Server
 
 openstack_connection = openstack.connect(cloud='envvars')
 

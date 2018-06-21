@@ -1,17 +1,12 @@
 
 
-## run
+## setup
 
 ```
-```
-## notes
-
-virtualenv: http://docs.python-guide.org/en/latest/dev/virtualenvs/#lower-level-virtualenv
-
-```
-source peachhub-clouds/bin/activate
+pip install --user pipenv
+# add ~/.local/bin to PATH
+pipenv shell
+python api.py
 ```
 
-```
-pip freeze > requirements.txt
-```
+https://docs.openstack.org/openstacksdk/latest/user/index.html
